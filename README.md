@@ -1,15 +1,15 @@
 # Simplificar el trabajo
 
-Presentación web en español para enseñar, con un caso ficticio de renovación de seguros, cómo pedir a un asistente en VS Code que prepare un borrador a partir de varias fuentes y una plantilla.
+Presentación web en español, organizada en 8 diapositivas, para enseñar con un caso ficticio de renovación de seguros cómo pedir a un asistente en VS Code que prepare un borrador a partir de varias fuentes y una plantilla.
 
 ## Probar la web
 
-Abre `index.html` en un navegador. No requiere instalar dependencias, configurar un servidor ni conectarse a un modelo de AI.
+Abre `index.html` en un navegador. Usa los botones, los indicadores de progreso o las flechas izquierda/derecha para pasar las diapositivas. No requiere instalar dependencias, configurar un servidor ni conectarse a un modelo de AI.
 
 ## Qué incluye
 
-- Una historia guiada sobre una tarea de renovación.
-- Una simulación interactiva de la instrucción y del borrador con fuentes visibles.
+- Una presentación guiada de ocho diapositivas, sin desplazamiento vertical de página.
+- Una simulación interactiva de la instrucción y el borrador con fuentes visibles.
 - Descarga de un CSV de ejemplo que se puede abrir en Excel.
 - Un prompt de ejemplo para adaptar a un entorno autorizado.
 - Avisos claros sobre datos ficticios, privacidad y revisión humana.

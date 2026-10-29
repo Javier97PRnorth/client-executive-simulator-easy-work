@@ -4,268 +4,246 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f6f5f0">
-    <meta name="description" content="Una demo práctica y prudente para explorar cómo usar un asistente de AI en tareas documentales de seguros.">
+    <meta name="description" content="Una presentación práctica para explorar cómo usar AI en tareas documentales de seguros, con datos ficticios y revisión humana.">
     <title>Simplificar el trabajo — Una demo de AI para seguros</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
   </head>
-  <body>
-    <a class="skip-link" href="#main">Saltar al contenido</a>
+  <body class="deck-page">
+    <a class="skip-link" href="#slide-1">Saltar a la presentación</a>
 
-    <header class="site-header">
-      <a class="wordmark" href="#inicio" aria-label="Simplificar el trabajo, inicio">
+    <header class="deck-header">
+      <a class="wordmark" href="#slide-1" id="home-link" aria-label="Simplificar el trabajo, inicio">
         <span class="wordmark-mark" aria-hidden="true">s.</span>
         <span>Simplificar <span class="wordmark-light">el trabajo</span></span>
       </a>
-      <nav class="site-nav" aria-label="Navegación principal">
-        <a href="#caso">El caso</a>
-        <a href="#demo">Ver la demo</a>
-        <a href="#en-vscode">Cómo probarlo</a>
-      </nav>
-      <a class="header-cta" href="#demo">Explorar en 3 min <span aria-hidden="true">↗</span></a>
+      <span class="deck-label">Una presentación práctica <span>·</span> 8 diapositivas</span>
+      <span class="fiction-badge"><span></span> Datos ficticios</span>
     </header>
 
-    <main id="main">
-      <section class="hero section-shell" id="inicio">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> Una demostración práctica para seguros</div>
-          <h1>Menos tiempo copiando datos.<br><span>Más tiempo con el cliente.</span></h1>
-          <p class="hero-intro">¿Y si un asistente te ayudara a convertir documentos de renovación en un primer borrador ordenado, listo para revisar?</p>
-          <p class="hero-note">Sin magia ni decisiones automáticas: tú marcas el objetivo, revisas las fuentes y decides qué se usa.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#demo">Ver una renovación por dentro <span aria-hidden="true">↓</span></a>
-            <a class="text-link" href="#en-vscode">¿Y cómo se hace en VS Code? <span aria-hidden="true">→</span></a>
-          </div>
-          <div class="hero-proof">
-            <span class="proof-icon" aria-hidden="true">✓</span>
-            <span>Ejemplo ficticio · Revisión humana · Sin subir documentos</span>
+    <main class="presentation" id="main" aria-label="Presentación: Simplificar el trabajo">
+      <section class="slide cover-slide" id="slide-1" aria-labelledby="slide-title-1">
+        <div class="cover-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> 01 · Una demostración práctica para seguros</div>
+          <h1 id="slide-title-1">Menos tiempo copiando datos.<br><span>Más tiempo con el cliente.</span></h1>
+          <p class="cover-intro">¿Y si un asistente te ayudara a convertir documentos de renovación en un primer borrador ordenado, listo para revisar?</p>
+          <p class="cover-note">Sin magia ni decisiones automáticas: tú marcas el objetivo, revisas las fuentes y decides qué se usa.</p>
+          <div class="cover-points">
+            <span><i>✓</i> Un caso que ya conoces</span>
+            <span><i>✓</i> Tú mantienes el control</span>
           </div>
         </div>
-        <div class="hero-art" aria-label="Ilustración de una carpeta de renovación y una hoja de cálculo">
-          <div class="art-glow"></div>
-          <div class="floating-note note-top"><span class="note-icon note-icon-green">↗</span><span><strong>3 documentos</strong><small>ordenados en contexto</small></span></div>
-          <div class="paper-stack">
-            <div class="paper paper-back">
-              <span class="paper-tag">SINIESTROS</span>
-              <div class="paper-line line-long"></div><div class="paper-line line-mid"></div><div class="paper-line line-short"></div>
-              <div class="paper-mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            </div>
-            <div class="paper paper-front">
-              <div class="paper-top"><span class="paper-emblem">LA</span><span class="paper-tag">RENOVACIÓN</span></div>
-              <span class="paper-client">Lumen Atlántico, S.L.</span>
-              <div class="paper-line line-long"></div><div class="paper-line line-mid"></div>
-              <div class="paper-field"><span>Vencimiento</span><strong>31 ene 2027</strong></div>
-              <div class="paper-field"><span>Prima anual</span><strong>48.200 €</strong></div>
-            </div>
-            <div class="sheet-card">
-              <div class="sheet-title"><span class="sheet-icon">▦</span><span>Ficha de renovación</span><span class="sheet-menu">···</span></div>
-              <div class="sheet-row sheet-head"><span>Campo</span><span>Borrador</span><span>Fuente</span></div>
-              <div class="sheet-row"><span>Vencimiento</span><strong>31/01/27</strong><span class="source-pill">Póliza</span></div>
-              <div class="sheet-row"><span>Prima anual</span><strong>48.200 €</strong><span class="source-pill">Póliza</span></div>
-              <div class="sheet-row"><span>Siniestros</span><strong>3 · 12.400 €</strong><span class="source-pill">Historial</span></div>
-              <div class="sheet-review"><span class="review-dot"></span> Borrador · Pendiente de revisión</div>
-            </div>
+        <div class="cover-art" aria-label="Ilustración de una carpeta de renovación y una hoja de cálculo">
+          <div class="cover-glow"></div>
+          <div class="cover-paper">
+            <span class="paper-label">RENOVACIÓN</span>
+            <strong>Lumen Atlántico, S.L.</strong>
+            <span>Vencimiento <b>31 ene 2027</b></span>
+            <span>Prima anual <b>48.200 €</b></span>
           </div>
-          <div class="floating-note note-bottom"><span class="note-icon note-icon-violet">✳</span><span><strong>Siempre revisas tú</strong><small>antes de usar el resultado</small></span></div>
-          <span class="art-caption">Datos completamente ficticios</span>
+          <div class="cover-sheet">
+            <div class="cover-sheet-title"><span>▦</span> Ficha de renovación</div>
+            <div><span>Vencimiento</span><strong>31/01/2027</strong><small>póliza</small></div>
+            <div><span>Prima anual</span><strong>48.200 €</strong><small>póliza</small></div>
+            <div><span>Siniestros</span><strong>3 · 12.400 €</strong><small>historial</small></div>
+            <div class="cover-sheet-status"><i></i> Borrador pendiente de revisión</div>
+          </div>
+          <span class="cover-stamp">Ejemplo inventado</span>
         </div>
-        <div class="hero-scroll" aria-hidden="true"><span></span> Desliza para descubrir</div>
       </section>
 
-      <section class="trust-strip" aria-label="Principios de la demostración">
-        <div><span class="trust-check">01</span><span><strong>Empieza pequeño</strong><small>Una tarea que ya conoces</small></span></div>
-        <div><span class="trust-check">02</span><span><strong>Pide trazabilidad</strong><small>Que cada dato tenga una fuente</small></span></div>
-        <div><span class="trust-check">03</span><span><strong>Conserva el criterio</strong><small>La decisión sigue siendo tuya</small></span></div>
-      </section>
-
-      <section class="section-shell case-section" id="caso">
-        <div class="section-heading">
+      <section class="slide case-slide" id="slide-2" aria-labelledby="slide-title-2" hidden>
+        <div class="slide-heading">
           <div>
-            <div class="eyebrow"><span class="eyebrow-dot"></span> El caso de hoy</div>
-            <h2>Una renovación.<br><span>Tres fuentes. Un primer borrador.</span></h2>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> 02 · El caso</div>
+            <h2 id="slide-title-2">Una renovación.<br><span>Tres fuentes. Un primer borrador.</span></h2>
           </div>
-          <p>La parte tediosa no suele ser entender al cliente. Es buscar el mismo dato en varios sitios, volver a escribirlo y comprobar que no se ha quedado nada atrás.</p>
+          <p>La parte tediosa no suele ser entender al cliente. Es buscar el mismo dato en varios sitios, volver a escribirlo y comprobar que nada se haya quedado atrás.</p>
         </div>
-        <div class="case-grid">
-          <article class="source-card">
-            <div class="source-card-top"><span class="file-icon file-pdf">PDF</span><span class="source-kind">01 · Póliza</span><span class="source-check">✓</span></div>
-            <h3>Resumen de póliza</h3>
-            <p>Vigencia, prima anual, límites y coberturas.</p>
-            <span class="file-name">poliza_lumen_2026.pdf</span>
-          </article>
-          <article class="source-card">
-            <div class="source-card-top"><span class="file-icon file-xls">XLS</span><span class="source-kind">02 · Siniestros</span><span class="source-check">✓</span></div>
-            <h3>Historial de siniestros</h3>
-            <p>Recuento de casos y pagos registrados.</p>
-            <span class="file-name">historial_siniestros.xlsx</span>
-          </article>
-          <article class="source-card">
-            <div class="source-card-top"><span class="file-icon file-msg">MSG</span><span class="source-kind">03 · Cliente</span><span class="source-check">✓</span></div>
-            <h3>Correo de seguimiento</h3>
-            <p>Notas de servicio y puntos para confirmar.</p>
-            <span class="file-name">seguimiento_cliente.msg</span>
-          </article>
-          <div class="case-arrow" aria-hidden="true">→</div>
-          <article class="deliverable-card">
-            <div class="deliverable-icon" aria-hidden="true">▦</div>
-            <span class="deliverable-label">ENTREGABLE</span>
-            <h3>Ficha de renovación</h3>
-            <p>Un borrador para tu plantilla, con fuentes y pendientes visibles.</p>
-            <span class="deliverable-status"><span></span> Tú validas antes de enviar</span>
-          </article>
+        <div class="case-flow">
+          <div class="case-inputs">
+            <article class="source-card">
+              <div class="source-card-top"><span class="file-icon file-pdf">PDF</span><span class="source-kind">01 · Póliza</span></div>
+              <h3>Resumen de póliza</h3>
+              <p>Vigencia, prima anual, límites y coberturas.</p>
+              <span class="file-name">poliza_lumen_2026.pdf</span>
+            </article>
+            <article class="source-card">
+              <div class="source-card-top"><span class="file-icon file-xls">XLS</span><span class="source-kind">02 · Siniestros</span></div>
+              <h3>Historial de siniestros</h3>
+              <p>Recuento de casos y pagos registrados.</p>
+              <span class="file-name">historial_siniestros.xlsx</span>
+            </article>
+            <article class="source-card">
+              <div class="source-card-top"><span class="file-icon file-msg">MSG</span><span class="source-kind">03 · Cliente</span></div>
+              <h3>Correo de seguimiento</h3>
+              <p>Notas de servicio y puntos para confirmar.</p>
+              <span class="file-name">seguimiento_cliente.msg</span>
+            </article>
+          </div>
+          <div class="case-result">
+            <span class="deliverable-icon">▦</span>
+            <span class="deliverable-label">LO QUE QUIERES PREPARAR</span>
+            <h3>Una ficha de renovación</h3>
+            <p>Un primer borrador para tu plantilla, con las fuentes y lo que queda por confirmar.</p>
+            <span class="human-check"><i>✓</i> Tú validas antes de usarla</span>
+          </div>
+        </div>
+        <p class="slide-takeaway"><strong>La idea:</strong> delegar el trabajo mecánico, no el criterio profesional.</p>
+      </section>
+
+      <section class="slide documents-slide" id="slide-3" aria-labelledby="slide-title-3" hidden>
+        <div class="eyebrow"><span class="eyebrow-dot"></span> 03 · El contexto</div>
+        <h2 id="slide-title-3">Primero, reúne las piezas.<br><span>Después, pide una tarea concreta.</span></h2>
+        <p class="slide-lead">En un espacio de trabajo de VS Code, el asistente puede usar los archivos que tú le indiques como contexto. No hace falta empezar con todos los documentos del cliente.</p>
+        <div class="document-flow">
+          <div class="document-list">
+            <div class="document-row"><i class="tiny-file tiny-pdf">P</i><span><strong>poliza_lumen_2026.pdf</strong><small>Datos de la póliza</small></span><b>PDF</b></div>
+            <div class="document-row"><i class="tiny-file tiny-xls">X</i><span><strong>historial_siniestros.xlsx</strong><small>Recuento y pagos</small></span><b>XLS</b></div>
+            <div class="document-row"><i class="tiny-file tiny-msg">M</i><span><strong>seguimiento_cliente.msg</strong><small>Notas para confirmar</small></span><b>MSG</b></div>
+            <div class="document-row template-row"><i class="template-icon">▦</i><span><strong>plantilla_renovacion.xlsx</strong><small>Una copia para completar</small></span><b>XLS</b></div>
+          </div>
+          <div class="context-card">
+            <span class="context-symbol">⌘</span>
+            <h3>Un encargo acotado</h3>
+            <p>“Completa estos campos, dime de qué archivo sale cada dato y deja lo que no esté claro como pendiente.”</p>
+            <div class="context-rule"><span>✓</span> Solo los archivos necesarios</div>
+            <div class="context-rule"><span>✓</span> Plantilla original intacta</div>
+          </div>
+        </div>
+        <p class="slide-footnote"><span>i</span> Trabaja solo en herramientas autorizadas y con datos cuyo uso esté permitido.</p>
+      </section>
+
+      <section class="slide instruction-slide" id="slide-4" aria-labelledby="slide-title-4" hidden>
+        <div class="eyebrow"><span class="eyebrow-dot"></span> 04 · La instrucción</div>
+        <h2 id="slide-title-4">La diferencia está en <span>cómo lo pides.</span></h2>
+        <p class="slide-lead">No hace falta saber programar. Explica el encargo, los límites y qué debe hacer si no puede respaldar un dato.</p>
+        <div class="instruction-card">
+          <div class="instruction-card-header"><span class="assistant-avatar">✳</span><span><strong>Copilot Chat</strong><small>Ejemplo de instrucción en VS Code</small></span><span class="fiction-badge"><span></span> Demo</span></div>
+          <blockquote id="prompt-text">Prepara un borrador de ficha de renovación con la plantilla. Para cada dato, indica el documento de origen. Si falta o hay discrepancias, déjalo como pendiente y no lo inventes. No hagas recomendaciones.</blockquote>
+          <div class="instruction-rules">
+            <span><i>1</i> Qué resultado necesitas</span>
+            <span><i>2</i> De dónde sacar la información</span>
+            <span><i>3</i> Qué hacer ante dudas</span>
+          </div>
+          <div class="instruction-actions">
+            <button class="copy-button" type="button" data-copy="prompt-text">▣ <span>Copiar instrucción</span></button>
+            <button class="button button-run" id="run-demo" type="button">Ver un borrador de ejemplo <span aria-hidden="true">→</span></button>
+          </div>
+          <p class="sim-status" id="sim-status" aria-live="polite"></p>
         </div>
       </section>
 
-      <section class="demo-section" id="demo">
-        <div class="section-shell">
-          <div class="section-heading demo-heading">
-            <div>
-              <div class="eyebrow"><span class="eyebrow-dot"></span> Prueba la idea</div>
-              <h2>Así podría sentirse<br><span>trabajar con un asistente.</span></h2>
+      <section class="slide review-slide" id="slide-5" aria-labelledby="slide-title-5" hidden>
+        <div class="eyebrow"><span class="eyebrow-dot"></span> 05 · El resultado</div>
+        <h2 id="slide-title-5">Un borrador útil <span>no es una respuesta definitiva.</span></h2>
+        <p class="slide-lead">Cada dato debe poder comprobarse. Lo que falta o no encaja se queda a la vista, no se rellena con una suposición.</p>
+        <div class="review-layout">
+          <div class="result-panel">
+            <div class="result-header"><div><span class="result-icon">▦</span><span><strong>Ficha de renovación</strong><small>Plantilla · borrador de ejemplo</small></span></div><button class="download-button" id="download-csv" type="button" disabled>↓ <span>Descargar CSV</span></button></div>
+            <div class="result-placeholder" id="result-placeholder">
+              <div class="placeholder-sheet">▦</div>
+              <strong>El ejemplo aparecerá cuando avances desde la instrucción</strong>
             </div>
-            <p>No es una AI real ni procesa archivos: es una simulación interactiva para ver el flujo, el tipo de instrucción y el resultado que revisarías.</p>
-          </div>
-
-          <div class="simulator">
-            <div class="simulator-sidebar">
-              <div class="sim-sidebar-heading"><span class="sim-window-dots"><i></i><i></i><i></i></span><span>RENOVACIÓN · LUMEN</span></div>
-              <div class="sim-nav-label">ESPACIO DE TRABAJO</div>
-              <div class="sim-nav-item active"><span class="sim-nav-icon">▦</span> Resumen del caso</div>
-              <div class="sim-nav-item"><span class="sim-nav-icon">▤</span> Documentos <span class="nav-count">3</span></div>
-              <div class="sim-nav-label sim-nav-label-spaced">RESULTADO</div>
-              <div class="sim-nav-item"><span class="sim-nav-icon">▧</span> Ficha de renovación</div>
-              <div class="sidebar-safety"><span>i</span><p><strong>Entorno de demostración</strong><br>Todos los datos de este caso son inventados.</p></div>
-            </div>
-            <div class="simulator-main">
-              <div class="sim-topbar"><div><span class="breadcrumb">Casos</span><span class="breadcrumb-slash">/</span><strong>Renovación Lumen</strong></div><span class="demo-badge"><i></i> MODO DEMO</span></div>
-              <div class="sim-content">
-                <div class="sim-case-heading">
-                  <div><span class="sim-overline">RENOVACIÓN COMERCIAL</span><h3>Lumen Atlántico, S.L.</h3><p>Vencimiento: 31 enero 2027 <span>·</span> Responsable: tú</p></div>
-                  <div class="avatar-stack" aria-hidden="true"><span>LA</span></div>
-                </div>
-                <div class="stepper" aria-label="Pasos de la simulación">
-                  <div class="step active" data-step="1"><span>1</span><strong>Contexto</strong></div>
-                  <div class="step-line"></div>
-                  <div class="step" data-step="2"><span>2</span><strong>Instrucción</strong></div>
-                  <div class="step-line"></div>
-                  <div class="step" data-step="3"><span>3</span><strong>Revisión</strong></div>
-                </div>
-                <div class="sim-workspace">
-                  <div class="assistant-panel">
-                    <div class="assistant-heading"><span class="assistant-avatar">✳</span><span><strong>Copilot Chat</strong><small>Asistente de ejemplo</small></span><span class="panel-menu">···</span></div>
-                    <div class="chat-message assistant-message">
-                      <p>Hola. Puedo ayudarte a preparar un borrador de renovación usando las fuentes que has seleccionado. <strong>No enviaré nada ni tomaré decisiones por ti.</strong></p>
-                    </div>
-                    <div class="attached-docs" aria-label="Documentos de ejemplo seleccionados">
-                      <span class="attached-doc"><i class="tiny-file tiny-pdf">P</i> póliza.pdf</span>
-                      <span class="attached-doc"><i class="tiny-file tiny-xls">X</i> siniestros.xlsx</span>
-                      <span class="attached-doc"><i class="tiny-file tiny-msg">M</i> correo.msg</span>
-                    </div>
-                    <div class="prompt-box">
-                      <label for="prompt-text">TU INSTRUCCIÓN</label>
-                      <p id="prompt-text">Prepara un borrador de ficha de renovación con la plantilla. Para cada dato, indica el documento de origen. Si falta o hay discrepancias, déjalo como pendiente y no lo inventes. No hagas recomendaciones.</p>
-                      <button class="copy-button" type="button" data-copy="prompt-text"><span aria-hidden="true">▣</span> Copiar instrucción</button>
-                    </div>
-                    <div class="assistant-actions"><span class="secure-hint"><span>●</span> Datos ficticios, solo para la demo</span><button class="button button-run" id="run-demo" type="button">Preparar borrador <span aria-hidden="true">→</span></button></div>
-                    <p class="sim-status" id="sim-status" aria-live="polite"></p>
-                  </div>
-                  <div class="result-panel" id="result-panel">
-                    <div class="result-header"><div><span class="result-icon">▦</span><span><strong>Ficha de renovación</strong><small>Plantilla · borrador de ejemplo</small></span></div><button class="download-button" id="download-csv" type="button" disabled>↓ <span>Descargar CSV</span></button></div>
-                    <div class="result-placeholder" id="result-placeholder">
-                      <div class="placeholder-sheet">▦</div>
-                      <strong>Tu borrador aparecerá aquí</strong>
-                      <p>La simulación mostrará datos con su fuente y lo que queda por confirmar.</p>
-                    </div>
-                    <div class="result-table-wrap" id="result-table-wrap" hidden>
-                      <table>
-                        <thead><tr><th>Campo</th><th>Borrador</th><th>Origen</th></tr></thead>
-                        <tbody>
-                          <tr><td>Vencimiento</td><td>31/01/2027</td><td><span class="table-source">Póliza §2</span></td></tr>
-                          <tr><td>Prima anual</td><td>48.200 €</td><td><span class="table-source">Póliza §4</span></td></tr>
-                          <tr><td>Límite principal</td><td>2.000.000 €</td><td><span class="table-source">Póliza §3</span></td></tr>
-                          <tr><td>Siniestros pagados</td><td>12.400 € · 3 casos</td><td><span class="table-source">Historial</span></td></tr>
-                          <tr class="pending-row"><td>Interés en ampliar cobertura</td><td><span class="pending-text">Por confirmar</span></td><td><span class="table-source source-email">Correo</span></td></tr>
-                        </tbody>
-                      </table>
-                      <div class="review-callout"><span class="review-callout-icon">!</span><p><strong>Revisión necesaria</strong><br>Confirma importes y cobertura con las fuentes originales antes de utilizar esta ficha.</p></div>
-                      <div class="result-footer"><span><i></i> Borrador generado · Sin enviar</span><span>5 campos · 1 pendiente</span></div>
-                    </div>
-                    <div class="result-locked" id="result-locked"><span>🔒</span> Solo borrador. Sin acciones automáticas.</div>
-                  </div>
-                </div>
-                <div class="sim-bottom-note"><span class="note-check">✓</span><span>El asistente prepara. <strong>Tú compruebas, corriges y decides.</strong></span><a href="#en-vscode">Ver el flujo real <span aria-hidden="true">→</span></a></div>
-              </div>
+            <div class="result-table-wrap" id="result-table-wrap" hidden>
+              <table>
+                <thead><tr><th>Campo</th><th>Borrador</th><th>Origen</th></tr></thead>
+                <tbody>
+                  <tr><td>Vencimiento</td><td>31/01/2027</td><td><span class="table-source">Póliza §2</span></td></tr>
+                  <tr><td>Prima anual</td><td>48.200 €</td><td><span class="table-source">Póliza §4</span></td></tr>
+                  <tr><td>Límite principal</td><td>2.000.000 €</td><td><span class="table-source">Póliza §3</span></td></tr>
+                  <tr><td>Siniestros pagados</td><td>12.400 € · 3 casos</td><td><span class="table-source">Historial</span></td></tr>
+                  <tr class="pending-row"><td>Ampliación de cobertura</td><td><span class="pending-text">Por confirmar</span></td><td><span class="table-source source-email">Correo</span></td></tr>
+                </tbody>
+              </table>
+              <div class="result-footer"><span><i></i> Borrador · Sin enviar</span><span>4 datos · 1 pendiente</span></div>
             </div>
           </div>
-          <div class="demo-footnote"><span>✳</span> Importante: aquí no se suben archivos ni se llama a ningún modelo. La interfaz representa un posible flujo de trabajo.</div>
+          <aside class="review-aside">
+            <span class="review-aside-icon">!</span>
+            <h3>Revisión humana</h3>
+            <p>Confirma los importes y coberturas en los documentos originales antes de utilizar la ficha.</p>
+            <div class="review-aside-check"><span>✓</span> Comprueba la fuente</div>
+            <div class="review-aside-check"><span>✓</span> Corrige lo necesario</div>
+            <div class="review-aside-check"><span>✓</span> Decide qué se usa</div>
+          </aside>
         </div>
       </section>
 
-      <section class="section-shell how-section" id="en-vscode">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow"><span class="eyebrow-dot"></span> Del ejemplo al día a día</div>
-            <h2>Una forma sencilla<br><span>de empezar en VS Code.</span></h2>
-          </div>
-          <p>En un entorno aprobado por tu empresa, puedes trabajar sobre una copia de la plantilla y pedir ayuda paso a paso. No hace falta confiar a ciegas: haz una tarea pequeña y comprueba el resultado.</p>
-        </div>
+      <section class="slide vscode-slide" id="slide-6" aria-labelledby="slide-title-6" hidden>
+        <div class="eyebrow"><span class="eyebrow-dot"></span> 06 · Cómo probarlo</div>
+        <h2 id="slide-title-6">Una forma sencilla de empezar <span>en VS Code.</span></h2>
+        <p class="slide-lead">En un entorno aprobado por tu empresa, prueba con una copia, limita el encargo y revisa los cambios antes de aceptar nada.</p>
         <div class="how-grid">
           <article class="how-card">
-            <span class="how-number">01</span>
-            <div class="how-icon folder-icon">▱</div>
-            <h3>Prepara una carpeta de trabajo</h3>
-            <p>Usa una copia de los documentos y de la plantilla. Primero, confirma que la herramienta y el uso de datos están aprobados.</p>
-            <div class="code-chip"><span>▰</span> renovacion-lumen/</div>
+            <span class="how-number">01</span><div class="how-icon folder-icon">▱</div>
+            <h3>Prepara una carpeta</h3>
+            <p>Usa una copia de los documentos y de la plantilla. Confirma primero que la herramienta y el uso de datos están aprobados.</p>
+            <div class="code-chip">▰ renovacion-lumen/</div>
           </article>
           <article class="how-card">
-            <span class="how-number">02</span>
-            <div class="how-icon prompt-icon">✳</div>
-            <h3>Pide un borrador acotado</h3>
-            <p>Di qué archivos consultar, qué campos completar, cómo citar fuentes y qué hacer cuando falte información.</p>
+            <span class="how-number">02</span><div class="how-icon prompt-icon">✳</div>
+            <h3>Pide un borrador</h3>
+            <p>Indica qué campos llenar, cómo mostrar las fuentes y qué dejar pendiente. Puedes adaptar este prompt:</p>
             <button class="mini-copy" type="button" data-copy="real-prompt">Copiar prompt de ejemplo <span>↗</span></button>
             <textarea class="copy-source" id="real-prompt" readonly>Revisa la plantilla y los documentos proporcionados. Prepara una copia de la plantilla con los campos que puedas respaldar con una fuente. Añade el nombre del archivo y la sección de origen junto a cada dato. No infieras valores ni resuelvas discrepancias: márcalas como pendientes. No envíes correos, no cambies el archivo original y no hagas recomendaciones. Antes de guardar, enséñame un resumen de los cambios para que los revise.</textarea>
           </article>
           <article class="how-card">
-            <span class="how-number">03</span>
-            <div class="how-icon review-icon">✓</div>
+            <span class="how-number">03</span><div class="how-icon review-icon">✓</div>
             <h3>Revisa antes de usar</h3>
-            <p>Comprueba las cifras en origen, valida el formato en Excel y decide qué cambios aceptar. El asistente no conoce todo el contexto del cliente.</p>
+            <p>Verifica los datos en origen, valida el formato en Excel y decide qué cambios aceptar. El asistente no conoce todo el contexto.</p>
             <span class="review-stamp"><span>✓</span> Revisión humana</span>
           </article>
         </div>
+        <p class="slide-footnote"><span>i</span> VS Code es el espacio de trabajo; GitHub Copilot Chat es el asistente de AI.</p>
       </section>
 
-      <section class="guardrail-section">
-        <div class="section-shell guardrail-inner">
-          <div class="guardrail-icon" aria-hidden="true">⌑</div>
-          <div>
-            <div class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> Una regla que no cambia</div>
-            <h2>Los datos del cliente<br><span>no son material de prueba.</span></h2>
-            <p>Esta web usa información inventada. En el trabajo real, sigue siempre las políticas de tu empresa sobre herramientas aprobadas, datos personales y documentos confidenciales. Si tienes dudas, no pegues ni subas el documento: consúltalo primero.</p>
-          </div>
-          <div class="guardrail-side"><span class="guardrail-check">✓</span><strong>La AI propone.</strong><strong>Tú verificas.</strong><strong>Tú decides.</strong></div>
+      <section class="slide privacy-slide" id="slide-7" aria-labelledby="slide-title-7" hidden>
+        <div class="privacy-icon" aria-hidden="true">⌑</div>
+        <div class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> 07 · Privacidad y criterio</div>
+        <h2 id="slide-title-7">Los datos del cliente <span>no son material de prueba.</span></h2>
+        <p>Esta presentación usa información inventada. En el trabajo real, sigue las políticas de tu empresa sobre herramientas aprobadas, datos personales y documentos confidenciales. Si tienes dudas, no pegues ni subas el documento: consúltalo primero.</p>
+        <div class="privacy-principles">
+          <div><span>01</span><strong>Usa solo herramientas autorizadas</strong></div>
+          <div><span>02</span><strong>Protege la información del cliente</strong></div>
+          <div><span>03</span><strong>Verifica antes de compartir</strong></div>
         </div>
+        <div class="privacy-mantra"><span>✓</span> La AI propone. <strong>Tú verificas. Tú decides.</strong></div>
       </section>
 
-      <section class="closing-section section-shell">
-        <div class="closing-card">
-          <div class="closing-orb orb-one"></div><div class="closing-orb orb-two"></div>
-          <div class="closing-content">
-            <span class="closing-label">NO HAY QUE CAMBIARLO TODO</span>
-            <h2>Empieza con una tarea.<br><span>Y quédate con lo que te sirva.</span></h2>
-            <p>La mejor prueba no es una demo perfecta. Es una tarea pequeña, en un entorno permitido, cuyo resultado puedes revisar.</p>
-            <a class="button button-light" href="#demo">Volver a la simulación <span aria-hidden="true">↑</span></a>
-          </div>
-          <div class="closing-aside"><div class="aside-card"><span>Una buena primera prueba</span><strong>“Resume estos documentos y dime qué dato falta para completar la ficha.”</strong><small>Alcance claro · Fuentes visibles · Sin decisiones automáticas</small></div></div>
+      <section class="slide closing-slide" id="slide-8" aria-labelledby="slide-title-8" hidden>
+        <div class="closing-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> 08 · Para llevarte una idea</div>
+          <h2 id="slide-title-8">Empieza con una tarea.<br><span>Y quédate con lo que te sirva.</span></h2>
+          <p>La mejor prueba no es una demo perfecta. Es una tarea pequeña, en un entorno permitido, cuyo resultado puedes revisar.</p>
+          <button class="button button-primary" type="button" data-go-to="4">Volver a la instrucción <span aria-hidden="true">↗</span></button>
         </div>
+        <div class="closing-prompt">
+          <span>UNA BUENA PRIMERA PRUEBA</span>
+          <strong>“Resume estos documentos y dime qué dato falta para completar la ficha.”</strong>
+          <small>Alcance claro · Fuentes visibles · Sin decisiones automáticas</small>
+        </div>
+        <span class="closing-caption">Simplificar el trabajo · Datos ficticios · 2026</span>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <a class="wordmark footer-wordmark" href="#inicio"><span class="wordmark-mark" aria-hidden="true">s.</span><span>Simplificar <span class="wordmark-light">el trabajo</span></span></a>
-      <span>Una demo educativa · Datos ficticios · 2026</span>
-      <a href="#inicio">Volver arriba ↑</a>
-    </footer>
+    <nav class="deck-controls" aria-label="Controles de diapositivas">
+      <button class="nav-button previous-button" id="previous-slide" type="button" aria-label="Diapositiva anterior" disabled><span aria-hidden="true">←</span><span class="nav-button-label">Anterior</span></button>
+      <div class="progress-controls">
+        <span class="progress-count" id="progress-count" aria-live="polite">01 <span>/ 08</span></span>
+        <div class="progress-dots" role="group" aria-label="Ir a una diapositiva">
+          <button type="button" data-slide="0" aria-label="Ir a la diapositiva 1: Portada" aria-current="step"></button>
+          <button type="button" data-slide="1" aria-label="Ir a la diapositiva 2: El caso"></button>
+          <button type="button" data-slide="2" aria-label="Ir a la diapositiva 3: Documentos"></button>
+          <button type="button" data-slide="3" aria-label="Ir a la diapositiva 4: La instrucción"></button>
+          <button type="button" data-slide="4" aria-label="Ir a la diapositiva 5: Resultado y revisión"></button>
+          <button type="button" data-slide="5" aria-label="Ir a la diapositiva 6: Cómo probarlo en VS Code"></button>
+          <button type="button" data-slide="6" aria-label="Ir a la diapositiva 7: Privacidad"></button>
+          <button type="button" data-slide="7" aria-label="Ir a la diapositiva 8: Cierre"></button>
+        </div>
+      </div>
+      <button class="nav-button next-button" id="next-slide" type="button" aria-label="Siguiente diapositiva"><span class="nav-button-label">Siguiente</span><span aria-hidden="true">→</span></button>
+    </nav>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
   </body>
 </html>
