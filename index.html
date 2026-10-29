@@ -120,7 +120,7 @@
         <p class="slide-lead">No hace falta saber programar. Explica el encargo, los límites y qué debe hacer si no puede respaldar un dato.</p>
         <div class="instruction-card">
           <div class="instruction-card-header"><span class="assistant-avatar">✳</span><span><strong>Copilot Chat</strong><small>Ejemplo de instrucción en VS Code</small></span><span class="fiction-badge"><span></span> Demo</span></div>
-          <blockquote id="prompt-text">Prepara un borrador de ficha de renovación con la plantilla. Para cada dato, indica el documento de origen. Si falta o hay discrepancias, déjalo como pendiente y no lo inventes. No hagas recomendaciones.</blockquote>
+          <blockquote id="prompt-text">Completa una copia de la ficha. Para cada dato, indica archivo y referencia exacta (PDF: página/líneas; Excel: hoja/celdas; correo: asunto/párrafo) e incluye una cita breve. Si falta o discrepa, cita las fuentes en conflicto y márcalo como pendiente. No inventes ni modifiques los originales.</blockquote>
           <div class="instruction-rules">
             <span><i>1</i> Qué resultado necesitas</span>
             <span><i>2</i> De dónde sacar la información</span>
@@ -136,8 +136,8 @@
 
       <section class="slide review-slide" id="slide-5" aria-labelledby="slide-title-5" hidden>
         <div class="eyebrow"><span class="eyebrow-dot"></span> 05 · El resultado</div>
-        <h2 id="slide-title-5">Un borrador útil <span>no es una respuesta definitiva.</span></h2>
-        <p class="slide-lead">Cada dato debe poder comprobarse. Lo que falta o no encaja se queda a la vista, no se rellena con una suposición.</p>
+        <h2 id="slide-title-5">Un borrador <span>no es infalible.</span></h2>
+        <p class="slide-lead">Cada dato incluye una referencia para volver a la fuente y comprobarlo. Si algo no se puede respaldar, queda pendiente en vez de rellenarse con una suposición.</p>
         <div class="review-layout">
           <div class="result-panel">
             <div class="result-header"><div><span class="result-icon">▦</span><span><strong>Ficha de renovación</strong><small>Plantilla · borrador de ejemplo</small></span></div><button class="download-button" id="download-csv" type="button" disabled>↓ <span>Descargar CSV</span></button></div>
@@ -147,16 +147,32 @@
             </div>
             <div class="result-table-wrap" id="result-table-wrap" hidden>
               <table>
-                <thead><tr><th>Campo</th><th>Borrador</th><th>Origen</th></tr></thead>
+                <thead><tr><th>Campo</th><th>Borrador</th><th>Referencia y extracto</th></tr></thead>
                 <tbody>
-                  <tr><td>Vencimiento</td><td>31/01/2027</td><td><span class="table-source">Póliza §2</span></td></tr>
-                  <tr><td>Prima anual</td><td>48.200 €</td><td><span class="table-source">Póliza §4</span></td></tr>
-                  <tr><td>Límite principal</td><td>2.000.000 €</td><td><span class="table-source">Póliza §3</span></td></tr>
-                  <tr><td>Siniestros pagados</td><td>12.400 € · 3 casos</td><td><span class="table-source">Historial</span></td></tr>
-                  <tr class="pending-row"><td>Ampliación de cobertura</td><td><span class="pending-text">Por confirmar</span></td><td><span class="table-source source-email">Correo</span></td></tr>
+                  <tr>
+                    <td>Vencimiento</td><td>31/01/2027</td>
+                    <td><details class="source-detail"><summary>poliza_lumen_2026.pdf · p. 2, líneas 4–5</summary><p>«Periodo de seguro: del 1 de febrero de 2026 al 31 de enero de 2027.»</p></details></td>
+                  </tr>
+                  <tr>
+                    <td>Prima anual</td><td>48.200 €</td>
+                    <td><details class="source-detail"><summary>poliza_lumen_2026.pdf · p. 4, línea 3</summary><p>«Prima anual neta: 48.200 EUR.»</p></details></td>
+                  </tr>
+                  <tr>
+                    <td>Límite principal</td><td>2.000.000 €</td>
+                    <td><details class="source-detail"><summary>poliza_lumen_2026.pdf · p. 3, líneas 8–9</summary><p>«Límite máximo por siniestro: 2.000.000 EUR.»</p></details></td>
+                  </tr>
+                  <tr>
+                    <td>Siniestros pagados</td><td>12.400 € · 3 casos</td>
+                    <td><details class="source-detail"><summary>historial_siniestros.xlsx · Siniestros!B8:D10</summary><p>Rango de ejemplo: tres registros de siniestro cuya suma de pagos es 12.400 EUR.</p></details></td>
+                  </tr>
+                  <tr class="pending-row">
+                    <td>Ampliación de cobertura</td><td><span class="pending-text">Por confirmar</span></td>
+                    <td><details class="source-detail source-email"><summary>seguimiento_cliente.msg · «Renovación» · párrafo 2</summary><p>«Nos gustaría revisar si podemos ampliar la cobertura; aún no hemos definido el límite solicitado.» No hay un importe confirmado.</p></details></td>
+                  </tr>
                 </tbody>
               </table>
-              <div class="result-footer"><span><i></i> Borrador · Sin enviar</span><span>4 datos · 1 pendiente</span></div>
+              <p class="source-disclaimer"><span>i</span> Referencias y extractos inventados para la demo. En documentos reales, usa el localizador que corresponda al formato.</p>
+              <div class="result-footer"><span><i></i> Borrador · Sin enviar</span><span>4 datos con fuente · 1 pendiente</span></div>
             </div>
           </div>
           <aside class="review-aside">
@@ -184,9 +200,9 @@
           <article class="how-card">
             <span class="how-number">02</span><div class="how-icon prompt-icon">✳</div>
             <h3>Pide un borrador</h3>
-            <p>Indica qué campos llenar, cómo mostrar las fuentes y qué dejar pendiente. Puedes adaptar este prompt:</p>
+            <p>Indica qué campos llenar y cómo localizar cada fuente: página y líneas, hoja y celdas o asunto y párrafo. Deja lo que no puedas verificar como pendiente.</p>
             <button class="mini-copy" type="button" data-copy="real-prompt">Copiar prompt de ejemplo <span>↗</span></button>
-            <textarea class="copy-source" id="real-prompt" readonly>Revisa la plantilla y los documentos proporcionados. Prepara una copia de la plantilla con los campos que puedas respaldar con una fuente. Añade el nombre del archivo y la sección de origen junto a cada dato. No infieras valores ni resuelvas discrepancias: márcalas como pendientes. No envíes correos, no cambies el archivo original y no hagas recomendaciones. Antes de guardar, enséñame un resumen de los cambios para que los revise.</textarea>
+            <textarea class="copy-source" id="real-prompt" readonly>Revisa la plantilla y los documentos proporcionados. Prepara una copia de la plantilla y completa solo los campos que puedas respaldar. Junto a cada dato, indica el nombre del archivo y una referencia exacta: página y líneas para PDF; hoja y celdas para Excel; asunto y párrafo para correo. Incluye una cita breve del texto de origen. Si el dato falta o las fuentes discrepan, márcalo como pendiente, cita las fuentes en conflicto y no inventes una respuesta. No cambies los archivos originales, no envíes correos ni hagas recomendaciones. Antes de guardar, enséñame un resumen de los cambios para que los revise.</textarea>
           </article>
           <article class="how-card">
             <span class="how-number">03</span><div class="how-icon review-icon">✓</div>

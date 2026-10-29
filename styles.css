@@ -521,7 +521,30 @@ body { font-size: 17px; }
 
 @media (max-height: 680px) and (max-width: 680px) {
   .result-table-wrap th { font-size: 9px; }
-  .result-table-wrap td { font-size: 10px; }
+  .result-table-wrap th { padding-top: 4px; padding-bottom: 4px; }
+  .result-table-wrap td { padding-top: 5px; padding-bottom: 5px; font-size: 10px; }
   .table-source, .pending-text { font-size: 8px; }
   .how-card p { display: none; }
+  .review-aside { grid-template-columns: 20px 1fr 1fr 1fr; gap: 4px; padding: 6px 7px; }
+  .review-aside-icon { width: 18px; height: 18px; }
+  .review-aside h3 { grid-column: 2 / -1; }
+  .review-slide > h2 { margin-top: 8px; }
+  .review-layout { gap: 2px; }
+  .review-aside { gap: 2px; padding-top: 4px; padding-bottom: 4px; }
+  .source-disclaimer { margin-top: 4px; line-height: 1.3; }
+}
+
+.source-detail { position: relative; max-width: 100%; color: #426a4d; font-size: 11px; }
+.source-detail summary { width: fit-content; max-width: 100%; cursor: pointer; color: #426a4d; font-size: 11px; font-weight: 600; line-height: 1.45; text-decoration: underline; text-decoration-color: #b7cdb8; text-underline-offset: 3px; }
+.source-detail summary::marker { color: #82a184; font-size: 10px; }
+.source-detail p { position: absolute; z-index: 5; top: calc(100% + 6px); right: 0; width: min(330px, calc(100vw - 70px)); margin: 0; padding: 9px 11px; border: 1px solid #dfe8de; border-left: 3px solid #9ab79a; border-radius: 5px; background: #f5f8f3; box-shadow: 0 6px 18px #26392b20; color: #596a5d; font-size: 11px; font-weight: 400; line-height: 1.5; }
+.source-email summary { color: #766b9f; text-decoration-color: #d3cdeb; }
+.source-email p { border-color: #b7acd9; background: #f7f5fc; color: #655f7b; }
+.source-disclaimer { display: flex; align-items: flex-start; gap: 7px; margin: 7px 0 0; color: #77847a; font-size: 10px; line-height: 1.45; }
+.source-disclaimer > span { display: grid; flex: 0 0 16px; width: 16px; height: 16px; place-items: center; border-radius: 50%; background: #e8efe7; color: #64826a; font-size: 10px; }
+
+@media (max-width: 680px) {
+  .source-detail summary { font-size: 9px; }
+  .source-detail p { font-size: 9px; }
+  .source-disclaimer { font-size: 8px; }
 }

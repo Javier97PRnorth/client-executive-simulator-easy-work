@@ -116,14 +116,23 @@ document.querySelectorAll("[data-copy]").forEach((button) => {
   });
 });
 
+document.querySelectorAll(".source-detail").forEach((detail) => {
+  detail.addEventListener("toggle", () => {
+    if (!detail.open) return;
+    document.querySelectorAll(".source-detail[open]").forEach((otherDetail) => {
+      if (otherDetail !== detail) otherDetail.open = false;
+    });
+  });
+});
+
 downloadButton.addEventListener("click", () => {
   const rows = [
-    ["Campo", "Borrador", "Origen", "Estado"],
-    ["Vencimiento", "31/01/2027", "Póliza §2", "Revisar"],
-    ["Prima anual", "48.200 EUR", "Póliza §4", "Revisar"],
-    ["Límite principal", "2.000.000 EUR", "Póliza §3", "Revisar"],
-    ["Siniestros pagados", "12.400 EUR; 3 casos", "Historial", "Revisar"],
-    ["Interés en ampliar cobertura", "", "Correo", "Por confirmar"],
+    ["Campo", "Borrador", "Referencia de origen", "Cita / revisión", "Estado"],
+    ["Vencimiento", "31/01/2027", "poliza_lumen_2026.pdf, p. 2, líneas 4-5", "Periodo: 01/02/2026 a 31/01/2027", "Revisar"],
+    ["Prima anual", "48.200 EUR", "poliza_lumen_2026.pdf, p. 4, línea 3", "Prima anual neta: 48.200 EUR", "Revisar"],
+    ["Límite principal", "2.000.000 EUR", "poliza_lumen_2026.pdf, p. 3, líneas 8-9", "Límite máximo por siniestro: 2.000.000 EUR", "Revisar"],
+    ["Siniestros pagados", "12.400 EUR; 3 casos", "historial_siniestros.xlsx, hoja Siniestros, B8:D10", "Rango de ejemplo; tres registros suman 12.400 EUR", "Revisar"],
+    ["Ampliación de cobertura", "", "seguimiento_cliente.msg, asunto Renovación, párrafo 2", "Aún no se ha definido el límite solicitado", "Por confirmar"],
   ];
   const csv = `\uFEFF${rows.map((row) => row.map((cell) => `"${cell.replaceAll('"', '""')}"`).join(";")).join("\r\n")}`;
   const file = new Blob([csv], { type: "text/csv;charset=utf-8" });
