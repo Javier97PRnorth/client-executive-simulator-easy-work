@@ -17,7 +17,7 @@
         <span class="wordmark-mark" aria-hidden="true">s.</span>
         <span>Simplificar <span class="wordmark-light">el trabajo</span></span>
       </a>
-      <span class="deck-label">Una presentación práctica <span>·</span> 8 diapositivas</span>
+      <span class="deck-label">Una presentación práctica <span>·</span> 9 diapositivas</span>
       <span class="fiction-badge"><span></span> Datos ficticios</span>
     </header>
 
@@ -227,10 +227,56 @@
         <div class="privacy-mantra"><span>✓</span> La AI propone. <strong>Tú verificas. Tú decides.</strong></div>
       </section>
 
-      <section class="slide closing-slide" id="slide-8" aria-labelledby="slide-title-8" hidden>
+      <section class="slide demo-package-slide" id="slide-8" aria-labelledby="slide-title-8" hidden>
+        <div class="eyebrow"><span class="eyebrow-dot"></span> 08 · Pruébalo tú</div>
+        <h2 id="slide-title-8">Una demo lista para abrir <span>en VS Code.</span></h2>
+        <p class="slide-lead">Descarga el paquete ficticio, abre su carpeta en VS Code y pega el prompt en Copilot Chat. No necesitas instalar nada para revisar los archivos.</p>
+        <div class="demo-package-layout">
+          <div class="demo-package-card">
+            <span class="demo-package-icon" aria-hidden="true">↓</span>
+            <div>
+              <h3>Descarga los archivos de ejemplo</h3>
+              <p>Incluye tres fuentes inventadas, una plantilla CSV y una guía rápida.</p>
+              <a class="button button-primary demo-download" href="demo-paquete.zip" download>Descargar paquete de prueba <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+          <div class="demo-steps">
+            <h3>Después, haz esto</h3>
+            <ol>
+              <li>Descomprime el ZIP y abre esa carpeta en VS Code.</li>
+              <li>Pulsa “Copiar prompt” y pégalo en Copilot Chat.</li>
+              <li>Si abriste otra carpeta, cambia solo <code>RUTA_DE_TRABAJO</code>.</li>
+            </ol>
+            <p>El resultado será una ficha CSV que puedes abrir con Excel. La AI no debe modificar los documentos originales.</p>
+          </div>
+        </div>
+        <div class="demo-prompt-panel">
+          <div class="demo-prompt-heading">
+            <strong>Prompt para Copilot Chat · modo Agent</strong>
+            <button class="copy-button demo-copy-button" type="button" data-copy="demo-prompt">Copiar prompt</button>
+          </div>
+          <details class="demo-prompt-preview">
+            <summary>Ver el texto que se copiará</summary>
+            <pre class="demo-prompt" id="demo-prompt">En modo Agent de Copilot Chat, trabaja solo con los archivos de ejemplo de esta carpeta.
+
+RUTA_DE_TRABAJO = "."
+
+Usa RUTA_DE_TRABAJO como carpeta base. Lee allí poliza_lumen_2026.txt, historial_siniestros.csv, seguimiento_cliente.txt y plantilla_renovacion.csv. No modifiques esos archivos. Crea dentro de esa carpeta otra carpeta llamada resultado si hace falta y guarda allí una copia completada de la plantilla como ficha_renovacion.csv.
+
+Completa los datos de vencimiento, prima anual, límite principal, siniestros pagados y ampliación solicitada. Conserva las columnas de la plantilla: Campo;Valor;Fuente y localizador;Extracto para comprobar;Estado.
+
+Para cada valor, indica el nombre del archivo y la línea o fila exacta; añade un extracto breve que permita comprobarlo. No inventes datos. Si una fuente no permite confirmar un valor, deja Valor vacío y Estado como "Por confirmar", explicando qué falta. Conserva los importes y fechas tal como aparecen en las fuentes.
+
+No uses información externa, no tomes decisiones sobre cobertura y no envíes ni compartas nada. Antes de terminar, resume qué archivos leíste, dónde guardaste el CSV y qué datos dejaste pendientes. Todo el caso es ficticio y el resultado debe revisarse por una persona.</pre>
+          </details>
+        </div>
+        <p class="slide-footnote"><span>i</span> En el prompt, deja RUTA_DE_TRABAJO = "." si abriste en VS Code la carpeta descomprimida; si no, sustituye el punto por la ruta relativa a la carpeta que contiene los archivos.</p>
+      </section>
+
+      <section class="slide closing-slide" id="slide-9" aria-labelledby="slide-title-9" hidden>
         <div class="closing-copy">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> 08 · Para llevarte una idea</div>
-          <h2 id="slide-title-8">Empieza con una tarea.<br><span>Y quédate con lo que te sirva.</span></h2>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> 09 · Para llevarte una idea</div>
+          <h2 id="slide-title-9">Empieza con una tarea.<br><span>Y quédate con lo que te sirva.</span></h2>
           <p>La mejor prueba no es una demo perfecta. Es una tarea pequeña, en un entorno permitido, cuyo resultado puedes revisar.</p>
           <button class="button button-primary" type="button" data-go-to="4">Volver a la instrucción <span aria-hidden="true">↗</span></button>
         </div>
@@ -246,7 +292,7 @@
     <nav class="deck-controls" aria-label="Controles de diapositivas">
       <button class="nav-button previous-button" id="previous-slide" type="button" aria-label="Diapositiva anterior" disabled><span aria-hidden="true">←</span><span class="nav-button-label">Anterior</span></button>
       <div class="progress-controls">
-        <span class="progress-count" id="progress-count" aria-live="polite">01 <span>/ 08</span></span>
+        <span class="progress-count" id="progress-count" aria-live="polite">01 <span>/ 09</span></span>
         <div class="progress-dots" role="group" aria-label="Ir a una diapositiva">
           <button type="button" data-slide="0" aria-label="Ir a la diapositiva 1: Portada" aria-current="step"></button>
           <button type="button" data-slide="1" aria-label="Ir a la diapositiva 2: El caso"></button>
@@ -255,7 +301,8 @@
           <button type="button" data-slide="4" aria-label="Ir a la diapositiva 5: Resultado y revisión"></button>
           <button type="button" data-slide="5" aria-label="Ir a la diapositiva 6: Cómo probarlo en VS Code"></button>
           <button type="button" data-slide="6" aria-label="Ir a la diapositiva 7: Privacidad"></button>
-          <button type="button" data-slide="7" aria-label="Ir a la diapositiva 8: Cierre"></button>
+          <button type="button" data-slide="7" aria-label="Ir a la diapositiva 8: Paquete de prueba"></button>
+          <button type="button" data-slide="8" aria-label="Ir a la diapositiva 9: Cierre"></button>
         </div>
       </div>
       <button class="nav-button next-button" id="next-slide" type="button" aria-label="Siguiente diapositiva"><span class="nav-button-label">Siguiente</span><span aria-hidden="true">→</span></button>

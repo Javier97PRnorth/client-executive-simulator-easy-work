@@ -1,0 +1,17 @@
+DEMO DE RENOVACIÓN - DATOS FICTICIOS
+
+Este paquete contiene documentos inventados para practicar en VS Code:
+- poliza_lumen_2026.txt
+- historial_siniestros.csv
+- seguimiento_cliente.txt
+- plantilla_renovacion.csv
+
+Cómo probarlo:
+1. Abre esta carpeta en VS Code.
+2. Copia el prompt de la diapositiva 8 de la presentacion y pegalo en Copilot Chat.
+3. Si abriste esta carpeta directamente, deja RUTA_DE_TRABAJO = ".".
+4. Si abriste otra carpeta, cambia "." por la ruta relativa a esta carpeta.
+5. Revisa el archivo resultado/ficha_renovacion.csv antes de usarlo.
+
+El CSV se puede abrir en Excel. Los datos no son reales y no deben utilizarse
+para tomar decisiones de seguro.
