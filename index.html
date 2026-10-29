@@ -229,22 +229,23 @@
 
       <section class="slide demo-package-slide" id="slide-8" aria-labelledby="slide-title-8" hidden>
         <div class="eyebrow"><span class="eyebrow-dot"></span> 08 · Pruébalo tú</div>
-        <h2 id="slide-title-8">Analiza las pólizas PDF <span>incluidas en el repo.</span></h2>
-        <p class="slide-lead">Abre la carpeta del repositorio en VS Code y pega el prompt en Copilot Chat. La muestra trabaja con los cuatro documentos PZU en polaco de <code>polizas-de-test-local/</code>.</p>
+        <h2 id="slide-title-8">Analiza las pólizas PDF <span>de la muestra.</span></h2>
+        <p class="slide-lead">Descarga el paquete y abre la carpeta extraída en VS Code. Incluye los cuatro documentos PZU en polaco que utiliza el prompt.</p>
         <div class="demo-package-layout">
           <div class="demo-package-card">
             <span class="demo-package-icon" aria-hidden="true">PDF</span>
             <div>
-              <h3>Documentos de la muestra</h3>
-              <p>Condiciones PZU para negocio, PZU Doradca y seguros de bienes por incendio y otros riesgos o por todos los riesgos.</p>
+              <h3>Descarga el paquete de práctica</h3>
+              <p>Los cuatro PDF PZU están organizados en <code>polizas-de-test-local/</code>, igual que en las rutas del prompt.</p>
+              <a class="button button-primary demo-download" href="demo-paquete-polizas.zip" download>Descargar paquete de pólizas <span aria-hidden="true">↓</span></a>
             </div>
           </div>
           <div class="demo-steps">
             <h3>Después, haz esto</h3>
             <ol>
-              <li>Abre la raíz de este repositorio en VS Code.</li>
+              <li>Descomprime el ZIP y abre la carpeta extraída en VS Code.</li>
               <li>Pulsa “Copiar prompt” y pégalo en Copilot Chat.</li>
-              <li>Revisa el resumen en español y las referencias a los originales.</li>
+              <li>Revisa el análisis y las páginas citadas en los originales.</li>
             </ol>
             <p>El resultado será un análisis comparativo en Markdown. Los documentos fuente no se modifican.</p>
           </div>
@@ -256,7 +257,7 @@
           </div>
           <details class="demo-prompt-preview">
             <summary>Ver el texto que se copiará</summary>
-            <pre class="demo-prompt" id="demo-prompt">En modo Agent de Copilot Chat, analiza únicamente los cuatro PDF de condiciones de póliza que están en polizas-de-test-local/ en este repositorio:
+            <pre class="demo-prompt" id="demo-prompt">En modo Agent de Copilot Chat, analiza únicamente los cuatro PDF de condiciones de póliza incluidos en la carpeta polizas-de-test-local/:
 
 RUTA_DE_TRABAJO = "."
 
@@ -265,14 +266,14 @@ RUTA_DE_TRABAJO = "."
 3. polizas-de-test-local/PZU-Mienie-Ogien-Zywioly-OWU-2023-11-18.pdf
 4. polizas-de-test-local/PZU-Mienie-Wszystkie-Ryzyka-OWU-2023-11-18.pdf
 
-Usa RUTA_DE_TRABAJO como raíz del repositorio. Lee los cuatro PDF y prepara en español un resumen por documento de: objeto y alcance de la cobertura, exclusiones relevantes, límites o sumas aseguradas, obligaciones importantes y cómo se determina o paga una indemnización. Incluye después una comparación específica entre los dos documentos de seguro de bienes (incendio y otros fenómenos frente a todos los riesgos), señalando solo diferencias que puedas respaldar con el texto. No trates productos distintos como equivalentes ni infieras que algo está cubierto solo por el nombre del archivo.
+Usa RUTA_DE_TRABAJO como carpeta de la muestra extraída. Lee los cuatro PDF y prepara en español un resumen por documento de: objeto y alcance de la cobertura, exclusiones relevantes, límites o sumas aseguradas, obligaciones importantes y cómo se determina o paga una indemnización. Incluye después una comparación específica entre los dos documentos de seguro de bienes (incendio y otros fenómenos frente a todos los riesgos), señalando solo diferencias que puedas respaldar con el texto. No trates productos distintos como equivalentes ni infieras que algo está cubierto solo por el nombre del archivo.
 
 Los documentos están en polaco: conserva los términos polacos clave junto a su explicación en español y marca cualquier traducción o interpretación dudosa. Para cada afirmación, indica el nombre del PDF y la página impresa o, si no está clara, el número de página del archivo PDF; añade el encabezado o número de artículo cuando exista y una cita breve en polaco que permita comprobarla. Distingue lo que dice expresamente el documento de cualquier resumen tuyo. Si no puedes leer un archivo o verificar una afirmación, indícalo como pendiente; no adivines.
 
-Guarda el resultado como resultado/analisis_owu.md dentro del repositorio, creando la carpeta resultado si hace falta. No uses información externa, no modifiques los PDF ni otros archivos del repositorio y no des asesoramiento jurídico. Al terminar, resume qué documentos analizaste y qué aspectos quedaron pendientes de revisión humana.</pre>
+Guarda el resultado como resultado/analisis_owu.md dentro de RUTA_DE_TRABAJO, creando la carpeta resultado si hace falta. No uses información externa, no modifiques los PDF ni otros archivos de la muestra y no des asesoramiento jurídico. Al terminar, resume qué documentos analizaste y qué aspectos quedaron pendientes de revisión humana.</pre>
           </details>
         </div>
-        <p class="slide-footnote"><span>i</span> Deja RUTA_DE_TRABAJO = "." si abriste en VS Code la raíz del repositorio. Los PDF están en polizas-de-test-local/ y el texto original está en polaco.</p>
+        <p class="slide-footnote"><span>i</span> Descomprime el ZIP y abre la carpeta extraída en VS Code; deja RUTA_DE_TRABAJO = ".". Los documentos originales están en polaco.</p>
       </section>
 
       <section class="slide closing-slide" id="slide-9" aria-labelledby="slide-title-9" hidden>
