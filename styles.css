@@ -548,3 +548,34 @@ body { font-size: 17px; }
   .source-detail p { font-size: 9px; }
   .source-disclaimer { font-size: 8px; }
 }
+
+.slide h1, .slide h2 { font-size: clamp(40px, 4.3vw, 56px); }
+.slide-heading > p, .slide-lead { font-size: 19px; }
+.case-slide .source-card p, .case-result p, .document-row small, .context-card p,
+.privacy-slide > p, .closing-copy > p { font-size: 16px; }
+.document-row strong, .source-detail summary { font-size: 13px; }
+.source-disclaimer { font-size: 12px; }
+
+@media (max-width: 680px) {
+  .slide h1, .slide h2 { font-size: clamp(34px, 9vw, 44px); }
+  .slide-heading > p, .slide-lead { font-size: 16px; }
+  .cover-intro { font-size: 17px; }
+  .cover-note, .case-slide .source-card p, .case-result p,
+  .context-card p, .privacy-slide > p, .closing-copy > p { font-size: 13px; }
+  .case-slide .source-card h3, .document-row strong, .context-card h3,
+  .instruction-card blockquote, .closing-prompt strong { font-size: 15px; }
+  .document-row small, .source-detail summary, .source-detail p,
+  .how-card p, .review-aside-check, .privacy-principles > div { font-size: 11px; }
+  .slide-footnote, .privacy-mantra { font-size: 11px; }
+  .result-table-wrap th { font-size: 11px; }
+  .result-table-wrap td { font-size: 12px; }
+  .table-source, .pending-text { font-size: 10px; }
+  .source-disclaimer { font-size: 9px; }
+}
+
+@media (max-height: 680px) and (max-width: 680px) {
+  .result-table-wrap th { font-size: 10px; }
+  .result-table-wrap td { font-size: 11px; }
+  .table-source, .pending-text { font-size: 9px; }
+  .source-disclaimer { font-size: 9px; }
+}
