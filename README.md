@@ -12,12 +12,12 @@ Abre `index.html` en un navegador. Usa los botones, los indicadores de progreso 
 - Una simulación interactiva de la instrucción y un borrador con localizadores exactos (página y líneas, hoja y celdas, o asunto y párrafo) y extractos para comprobar cada dato.
 - Descarga de un CSV de ejemplo que se puede abrir en Excel.
 - Un prompt de ejemplo para adaptar a un entorno autorizado.
-- Una diapositiva de práctica con un paquete ZIP de archivos ficticios y un prompt copiable para probar en VS Code.
+- Una diapositiva de práctica con un prompt copiable para analizar los cuatro PDF de condiciones PZU incluidos en `polizas-de-test-local/`.
 - Avisos claros sobre datos ficticios, privacidad y revisión humana.
 
 La simulación es únicamente una interfaz educativa: no lee ni carga archivos, no usa Copilot y no procesa información real. Todos los nombres, fechas, importes, referencias y extractos del caso son inventados. El CSV descargable también contiene solo datos ficticios e incluye columnas para referencias, citas y estado de revisión. Los localizadores concretos cambian según el formato: por ejemplo, un PDF permite citar página y líneas; una hoja de cálculo, hoja y celdas; y un correo, asunto y párrafo.
 
-El ZIP `demo-paquete.zip` contiene otra serie de documentos ficticios en formatos de texto y CSV para practicar en VS Code. El prompt propone guardar el resultado como `resultado/ficha_renovacion.csv`, que se puede abrir con Excel, sin modificar los archivos de origen. Si la carpeta descomprimida se abre directamente en VS Code, se deja `RUTA_DE_TRABAJO = "."`; si no, se sustituye el punto por la ruta relativa a esa carpeta. Revisa el resultado y sus referencias; los datos son inventados y no sirven para decisiones reales.
+La diapositiva de práctica usa los cuatro PDF de `polizas-de-test-local/`: condiciones PZU para negocio, PZU Doradca y dos documentos de seguro de bienes. Están en polaco. El prompt pide un resumen y una comparación de los dos documentos de bienes, con citas breves y referencias a páginas y artículos, y propone guardar el resultado en `resultado/analisis_owu.md` sin modificar los originales. Abre la raíz del repositorio en VS Code para que `RUTA_DE_TRABAJO = "."` funcione. El paquete `demo-paquete.zip` sigue disponible como material independiente con documentos ficticios en texto y CSV; no forma parte del análisis de esos PDF.
 
 ## Uso responsable
 
